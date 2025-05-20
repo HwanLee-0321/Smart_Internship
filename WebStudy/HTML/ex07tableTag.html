@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        talble태그: 테이블이 들어갈 공간을 생성 
+        tr태그 (table row): 테이블 가로 
+        th태그 (table head): 제목 셀로 값이 담기는 태그
+        td태그 (table data): 일반 셀로 값이 담기는 태그
+        colspan: column 묶음
+        rowspan: row 묶음
+    -->
+    <table border="1px solid black">
+        <tr bgcolor = "lightblue">
+            <th>이름</th>
+            <th colspan="2">포지션/소속</th>
+        </tr>
+        <!-- tr>td*3 -->
+        <tr>
+            <td>손흥민</td>
+            <td rowspan="2">MF</td>
+            <td>토트넘</td>
+        </tr>
+
+        <tr>
+            <td>이강인</td>
+            <td>PSG</td>
+        </tr>
+
+        <tr>
+            <td>설영우</td>
+            <td>DF</td>
+            <td>울산.HD</td>
+        </tr>
+    </table>
+</body>
+</html>
