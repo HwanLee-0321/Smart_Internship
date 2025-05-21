@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./boxModel.css">
+    <style>
+        /* position: 요소의 위치를 배치하는 속성*/
+        #redBox{
+            /*
+            static: 정적인
+            - position 속성의 기본값
+            - 위치 속성(top, bottom,~) 비활성화
+            */
+            position: static;
+            top: 30px;
+        }
+        #blueBox{
+            /*
+            relative: 상대적인
+            - 기준: 본인이 원래 있던 위치
+            - 위치 속성(top, bottom,~) 활성화
+            */
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+        #parent{
+            position: relative;
+            top: 100px;
+        }
+        #greenBox{
+            /*
+            absolute: 절대적인
+            - 기준: static 아닌 부모 요소, 없다면 body
+            - 위치 속성 활성화
+            */
+            position: absolute;
+            top: 100px;
+        }
+        #grayBox{
+            /*
+            fix: 고정
+            - 기준: body 기준
+            - 위치 속성 활성화
+            - 부모 요소, 스크롤 저부 무시
+            */
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="redBox"></div>
+        <div id="blueBox"></div>
+        <div id="greenBox"></div>
+        <div id="grayBox"></div>
+    </div>
+</body>
+</html>
