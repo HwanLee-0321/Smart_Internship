@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        스타일시트 작성 방법
+        (1) 내부스타일: style태그 내 CSS문법 작성
+        (2) 외부스타일: 외부 파일에 CSS문법 작성 후 링크로 연결
+        (3) 인라인스타일: 요소 내 style속성으로 CSS문법 작성
+    -->
+
+    <!-- (1) 내부스타일 -->
+    <style>
+        /*
+            style태그: CSS 시작 알림
+                       작성 위치? head태그 안
+            CSS 문법: 선택자 {속성:값;}
+        */
+        h1{
+            color: red ;
+            background-color: lightblue ;
+        }
+        h2{
+            color: orange;
+        }
+    </style>
+
+    <!-- (2) 외부스타일 -->
+    <link rel="stylesheet" href="./ex01css.css">
+</head>
+<body>
+    <h1>빨강</h1>
+    <h2>주황</h2>
+
+    <!-- (3) 인라인스타일 -->
+    <h3 style="color: green;">초록</h3>
+</body>
+</html>

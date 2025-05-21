@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        하나의 요소에 여러 스타일이 적용될 때 우선순위
+        전체선택자 < 태그선택자 < 클랙스 < 아이디선택자 < 스타일속성
+        !important -> 최상위 적용 키워드
+        */
+        #id1{
+            color: red;
+        }
+        p{
+            /* !important 작성 위치: 선언 끝, ; 앞에*/
+            color: blue !important;
+        }
+        *{
+            color: green;
+        }
+        .class1{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <p id="id1" class="class1" style="color: aqua;">CSS는 정말 재밌어!</p>
+</body>
+</html>
