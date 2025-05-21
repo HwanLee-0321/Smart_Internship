@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./boxModel.css">
+    <style>
+        /* border-radius: 테두리 모서리를 둥글게 만드는 속성 */
+
+        #redBox{
+            border-top-left-radius: 20px;
+
+            /* 오른쪽 아래 모서리를 둥글게 */
+            border-bottom-right-radius: 20px;
+        }
+        #blueBox{
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        #greenBox{
+            border-radius: 50%;
+        }
+        #grayBox{
+            border-radius: 50%;
+            padding: 0 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="redBox"></div>
+    <div id="blueBox"></div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+</body>
+</html>

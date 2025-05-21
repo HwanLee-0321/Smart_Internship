@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        display: none -> 보이지X, 화면상 영역 차지 X
+        visibility: hidden -> 보이지X, 화면상 영역 차지 O
+
+        opacity: 투명도 조절(0~1사이 실수값)
+        */
+        .answer{
+            display: none;
+            /*visibility: hidden;*/
+        }
+        .question:hover+.answer{
+            display: inline;
+            color: blue;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <span class="question">좋아하는 커피 메뉴: </span>
+    <span class="answer">아아</span>
+    <br><br>
+    <span class="question">좋아하는 과목: </span>
+    <span class="answer">html,css</span>
+</body>
+</html>
