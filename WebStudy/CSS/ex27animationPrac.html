@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        두 개의 이미지가 2초 간격으로
+        계속해서 재생되는 화면 만들기
+        */
+        .img-container{
+            width: 800px;
+            height: 400px;
+            background-size: contain;
+            animation-name: img-ani;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            
+        }
+        @keyframes img-ani {
+            from{
+                background-image: url(https://i.pinimg.com/736x/66/02/94/66029453c28724c914245027bbdfd1fd.jpg);
+            }
+            to{
+                background-image: url(https://news.nateimg.co.kr/orgImg/pt/2022/04/11/202204110552773902_6253439fe52d8.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container"></div>
+</body>
+</html>

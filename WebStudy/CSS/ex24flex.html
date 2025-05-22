@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        flex: 아이템 간의 공간 배분 및 정렬
+        - container: flex 영향을 받는 전체 공간
+            지정방법: display: flex;
+        - item: 설정된 속성에 따라서 배치되는 것
+
+        div container를 container로 만들어주기 
+        
+        flex-direction: 아이템이 배치되는 축의 방향을 결정하는 속성
+        
+        flex-wrap: 아이템들의 줄바꿈을 결정하는 속성
+        
+        display: flex;
+        
+        flex-direction: row;
+
+        div item을 container로 만들어주기
+
+        메인축 방향에서 글씨 가운데 정렬
+
+        align-item: 수직축 방향에서 아이템 정렬
+        */
+        .container{
+            background-color: beige;
+
+            flex-wrap: wrap;
+        }
+        .item{
+            background-color: lightblue;
+            width: 200px;
+            height: 200px;
+            font-size: 3rem;
+            font-weight: bold;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">box1</div>
+        <div class="item">box2</div>
+        <div class="item">box3</div>
+        <div class="item">box4</div>
+        <div class="item">box5</div>
+        <div class="item">box6</div>
+    </div>
+</body>
+</html>

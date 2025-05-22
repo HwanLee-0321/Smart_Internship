@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        animation: 요소에 적용되는 스타일을 다른 스타일로 부드럽게 전환시키는 속성
+        */
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            
+            animation-name: box-animation;
+
+            animation-duration: 1.5s;
+
+            animation-iteration-count: 3;
+
+            animation-direction: alternate;
+        }
+
+        @keyframes box-animation {
+            from{
+
+            }
+            to{
+                margin-left: 200px;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
