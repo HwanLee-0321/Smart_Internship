@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>        
+        // 1. 출력
+        // 1-1) 문서에 출력하기   
+        document.write("This is Document");
+
+        // 1-2) 콘솔에 출력하기
+        console.log("This is Console");
+
+        console.log();
+
+        // 1-3) 팝업에 띄우기
+        alert("This is Alert");
+
+        // -----------------------------------------
+
+        // 2. 입력
+        // 2-1) 확인 질문: confirm
+        //      Type: boolean (True, False)
+
+        // var = variable
+        var late = confirm("This is confirm"); 
+        console.log(late);
+
+        // 2-2) 입력 확인문: prompt
+        //      Type: string    
+        // prompt("질문", [Default Data])
+        var Menu = prompt("What Menu?", '오징어아이스크림');
+        console.log(Menu);
+</script>
+</body>
+</html>
+

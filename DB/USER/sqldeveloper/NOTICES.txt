@@ -1,0 +1,63 @@
+SQL Developer Release 24.3.1
+----------------------------------------------------
+
+The SQL Developer release notes are available at 
+https://www.oracle.com/tools/sqldev/sqldev-relnotes-24.3.html
+
+SQL Developer VSCode Extension - https://marketplace.visualstudio.com/items?itemName=Oracle.sql-developer
+
+Learn more about SQL Developer
+
+Getting Started
+----------------------------------------------------
+*Training
+SQL Developer Overview Video - https://www.youtube.com/watch?v=EguMf4HbPU8&list=PL_qNe_aTKkIUUzDEJ7KuvyldBuynyoDb2&index=2
+Documentation - https://docs.oracle.com/en/database/oracle/sql-developer/
+SQL Developer on oracle.com - https://www.oracle.com/database/sqldeveloper/
+
+*Get a Database 
+Oracle VirtualBox Appliance - https://www.oracle.com/database/technologies/databaseappdev-vm.html
+Docker Images - https://github.com/oracle/docker-images
+Oracle Database XE - https://www.oracle.com/database/technologies/appdev/xe.html
+
+*Tutorials
+Online Tutorials - https://apexapps.oracle.com/pls/apex/f?p=44785:OLL_SEARCH:109511493102806:::2:P2_SEARCH_TEXT:sqldev
+
+*Demos
+Introduction to Oracle SQLcl
+Real Time SQL Monitoring - https://www.youtube.com/watch?v=koffmWahzQ4&list=PL_qNe_aTKkIUUzDEJ7KuvyldBuynyoDb2&index=10
+Debugging PL/SQL - https://www.youtube.com/watch?v=Ybe04HkE6Bs&list=PL_qNe_aTKkIUUzDEJ7KuvyldBuynyoDb2&index=25
+Importing Data from Excel into Oracle Database - https://www.youtube.com/watch?v=wWIhGWXEZC4&list=PL_qNe_aTKkIUUzDEJ7KuvyldBuynyoDb2&index=7
+Database Instance Viewer - https://www.youtube.com/watch?v=FrdUCdGJEG8&list=PL_qNe_aTKkIUUzDEJ7KuvyldBuynyoDb2&index=6
+
+*Community
+SQL Developer Forum - https://forums.oracle.com/ords/apexds/domain/dev-community/category/sql-developer?tags=sql-developer
+Team Blogs - https://www.oracle.com/database/technologies/appdev/sqldev/findusonline.html
+
+*Related Tools
+Oracle SQLcl - https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/
+Oracle Data Modeler - https://www.oracle.com/database/sqldeveloper/technologies/sql-data-modeler/
+Oracle REST Data Services - https://www.oracle.com/database/technologies/appdev/rest.html
+Oracle Live SQL - https://livesql.oracle.com/ords/f?p=590:1000
+
+*Extensions
+Open Source Examples - https://github.com/oracle-samples/oracle-db-examples/tree/main/sqldeveloper/extension
+SQL Developer Migrations - https://www.oracle.com/database/sqldeveloper/technologies/db-migration/
+Oracle Data Mining - https://www.oracle.com/big-data/technologies/dataminer/
+Oracle Timesten - https://www.oracle.com/database/technologies/related/timesten.html
+Oracle Spatial - https://www.oracle.com/database/spatial/
+Oracle OLAP - https://www.oracle.com/technetwork/database/options/olap/index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+

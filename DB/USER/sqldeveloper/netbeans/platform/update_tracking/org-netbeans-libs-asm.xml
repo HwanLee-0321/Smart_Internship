@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.asm">
+    <module_version install_time="1722424978329" last="true" origin="Ant" specification_version="5.3">
+        <file crc="904004786" name="core/asm-9.5.jar"/>
+        <file crc="11457781" name="core/asm-analysis-9.5.jar"/>
+        <file crc="1637338524" name="core/asm-commons-9.5.jar"/>
+        <file crc="3442267594" name="core/asm-tree-9.5.jar"/>
+        <file crc="2910679378" name="core/asm-util-9.5.jar"/>
+        <file crc="4155797549" name="core/org-netbeans-libs-asm.jar"/>
+    </module_version>
+</module>
