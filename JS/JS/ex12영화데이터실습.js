@@ -51,4 +51,4 @@ function createMovieTable(movieList) {
 let btn1 = document.getElementById('reqBtn');
 
 btn1.addEventListener('click', fetchAndDisplayMovies);
-// 페이지가 로드되면 영화 데이터를 가져오는 함수를 실행
+// 페이지가 로드되면 영화 데이터를 가져오는 함수를 실행rhd
