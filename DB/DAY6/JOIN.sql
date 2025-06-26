@@ -51,3 +51,12 @@ GROUP BY
     DEPARTMENT_ID
 HAVING
     sum(salary) <= 10000;
+
+SELECT 
+    first_name, 
+    JOB_ID,
+    manager_id
+from 
+    EMPLOYEES
+WHERE
+    MANAGER_ID IS NULL;
