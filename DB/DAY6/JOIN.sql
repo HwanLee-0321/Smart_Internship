@@ -70,3 +70,40 @@ from
     LOCATIONS l
 where
     d.LOCATION_ID = l.LOCATION_ID;
+
+SELECT
+    d.DEPARTMENT_ID,
+    d.DEPARTMENT_NAME,
+    d.LOCATION_ID,
+    l.STREET_ADDRESS,
+    l.CITY
+FROM 
+    DEPARTMENTS d 
+INNER JOIN 
+    LOCATIONS l ON (d.LOCATION_ID = l.LOCATION_ID) -- d.LOCATIONS -> d.LOCATION_ID 로 수정
+WHERE 
+    d.DEPARTMENT_ID IN (30, 40, 100)
+ORDER BY
+    d.department_id ASC;
+
+
+SELECT e.EMPLOYEE_ID, e.FIRST_NAME, j.JOB_TITLE
+FROM 
+    EMPLOYEES e
+INNER JOIN
+    JOBS j ON (e.JOB_ID = j.JOB_ID)
+where 
+    e.JOB_ID = j.JOB_ID 
+ORDER BY e.EMPLOYEE_ID asc;
+
+-- CROSS JOIN: 조건절이 없는 조인 방식
+-- > 조인 조건이 없기 때문에 모든 경우의 수가 나온다
+
+SELECT
+    수강생정보.학생ID,
+    수강생정보.학생이름,
+    성적표.과목,
+    성적표.성적
+from 
+    수강생정보,
+    성적표;
