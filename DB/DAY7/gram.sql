@@ -76,6 +76,42 @@ INSERT INTO 성적표  VALUES ('SMHRD4'  ,'PYTHON'   , 60  );
 INSERT INTO 성적표  VALUES ('SMHRD5'  ,'JAVA'     , 100 ); 
 INSERT INTO 성적표  VALUES ('SMHRD5'  ,'DATABASE' , 100 ); 
 INSERT INTO 성적표  VALUES ('SMHRD5'  ,'PYTHON'   , 100 ); 
+
+-- 데이터에 널을 추가
 INSERT INTO 성적표  VALUES ('SMHRD6'  ,'JAVA'     , NULL); 
 INSERT INTO 성적표  VALUES ('SMHRD6'  ,'DATABASE' , NULL); 
 INSERT INTO 성적표  VALUES ('SMHRD6'  ,'PYTHON'   , NULL); 
+
+-- update
+update 성적표
+set 성적 = 50
+where 학생ID = 'SMHRD6';
+
+select *
+from 성적표;
+
+commit;
+
+select * from 수강생정보;
+
+-- 수강생정보테이블에서 조준용이라는 학생이름을 cjy, 소속반을 B반으로 변경
+
+update 수강생정보
+set 학생이름 = 'LJH', 소속반 = 'C'
+where 학생이름 = 'CJY';
+
+-- 롤백
+-- 마지막 커밋으로 되돌리는 명령어
+-- 마지막 트랜잭션으로 되돌리는 명령어
+rollback;
+
+-- delete
+-- [사용법]
+-- delete from [테이블 명]
+-- where [삭제할 대상 해을 선별하기 위한 조건식]
+
+DELETE FROM 성적표
+WHERE 학생ID = 'SMHRD1';
+
+DELETE FROM 수강생정보
+WHERE 학생ID = 'SMHRD1';
