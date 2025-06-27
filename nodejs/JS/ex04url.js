@@ -2,7 +2,6 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs').promises;
 
-
 http.createServer(async(req,res)=>{
     const file = await fs.readFile('../html/ex03FS.html');
 
@@ -19,6 +18,5 @@ http.createServer(async(req,res)=>{
     console.log('query: ', parseURL.query);
 
 }).listen(8888, ()=>{
-    
     console.log('Server is running!!');
 });
