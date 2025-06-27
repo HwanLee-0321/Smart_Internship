@@ -127,3 +127,22 @@ WHERE 학생ID = 'SMHRD1';
 -- identified by [비밀번호 설정]
 
 -- system 에서 만든다!
+
+-- [시스템 권한 회수 방법]
+-- revoke   [시스템권한]
+-- from     [사용자계정]
+
+-- role: 권한을 한번에 주는 방법
+-- connect  : 접속권한을 묶어놓은 것
+-- resource : 객체 생성을 할 수 있는 것
+-- DBA      : 데이터베이스의 모든 권한을 묶어놓은 것
+
+-- grant connect, resource to [사용자];
+
+CREATE TABLE emp (
+    expno NUMBER PRIMARY KEY,  -- 'primary'를 'PRIMARY KEY'로 수정
+    ename VARCHAR2(20) NOT NULL,
+    job_id VARCHAR2(10),
+    sal NUMBER,
+    deptno NUMBER
+);
