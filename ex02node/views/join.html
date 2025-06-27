@@ -6,10 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <input type="text" placeholder="아이디"><br>
-        <input type="password" placeholder="비밀번호"><br>
-        <input type="text>" placeholder="닉네임"><br>
+    <!-- action: 어디로 요청할 것인지 경로 (절대경로/상대결로) -->
+    <!-- 절대경로: 외부로 요청을 할떄 -->
+    <!-- 상대경로: 내 서버로 요청을 할 때 -->
+    <!-- 현재 페이지의 경로: localhost:8888/join -->
+    <!-- 회원가입을 받아주는 서버의 경로 localhost:8888/user/join-->
+    <form action = "./user/join">
+        <input type="text" name="id" placeholder="아이디"><br>
+        <input type="password" name="pw" placeholder="비밀번호"><br>
+        <input type="text>" name="nickname" placeholder="닉네임"><br>
         <input type="submit" value="회원가입"><br>
     </form>
 </body>
