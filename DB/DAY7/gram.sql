@@ -115,3 +115,15 @@ WHERE 학생ID = 'SMHRD1';
 
 DELETE FROM 수강생정보
 WHERE 학생ID = 'SMHRD1';
+
+-- savepoint: 하나의 쿼리를 작게 분할하여 저장하는 기능을 수행하는 명령어
+
+-- DCL
+-- grant
+-- revoke
+-- role
+
+-- create user   [계정이름]
+-- identified by [비밀번호 설정]
+
+-- system 에서 만든다!
