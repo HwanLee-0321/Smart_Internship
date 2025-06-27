@@ -18,6 +18,14 @@ app.get('/login', (req,res)=>{
     //절대경로 : ex02express/views/join.html
     res.sendFile(path.join(__dirname, 'views', 'login.html'));
 });
+// user/join 요청 => 회원가입처리(생략) => login.html응답
+app.get('/user/join', (req, res)=>{
+    // 회원가입처리
+    // 사용자가 입력한 값 확인하기
+    console.log(req.query);
+    res.sendFile(path.join(__dirname, 'views', 'login.html'));
+});
+
 
 app.listen(8888, ()=>{
     console.log('Server is running on http://localhost:8888');
