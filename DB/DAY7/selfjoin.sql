@@ -67,3 +67,20 @@ full outer join
     EMPLOYEES e
 ON
     d.manager_id = e.employee_id;
+
+-- outer join
+-- left
+-- right
+-- full
+
+-- 오라클 문법으로 사용
+-- right
+SELECT
+    d.DEPARTMENT_ID,
+    d.DEPARTMENT_NAME,
+    d.MANAGER_ID,
+    e.FIRST_NAME
+from   
+    DEPARTMENTS d , EMPLOYEES e
+WHERE
+    d.manager_id = e.employee_id(+);
