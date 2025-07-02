@@ -14,7 +14,7 @@
 
     <!-- 누르자마자 회원탈퇴요청 -->
      <!-- GET -->
-    <form action="./user/delete">
+    <form action="/user/delete">
         <input type="hidden" name="id" value="1">
         <input type="submit" value="회원탈퇴">
     </form>
@@ -27,7 +27,11 @@
             <td>닉네임</td>
         </thead>
         <tbody>
-
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
         </tbody>
      </table>
 
@@ -37,7 +41,34 @@
         document.addEventListener('DOMContentLoaded', ()=>{
             // 비동기 데이터 요청
             // READ(->GET)
-            fetch('./user/list').then(res => {console.log(res);})
+            fetch('./user/list')
+            .then(res => res.json())
+            .then(members => { 
+                // class -> .id->#
+                const tbody = document.querySelector('#member-list')
+
+                // foreach
+                members.forEach(member => {
+                    const tr = document.createElement('tr');
+                    
+                    const tdId = document.createElement('td');
+                    tdId.textContent = member.id;
+
+                    const tdPw = document.createElement('td');
+                    tdPw.textContent = member.pw;
+
+                    const tdNick = document.createElement('td');
+                    tdNick.textContent = member.nick;
+
+                    tr.appendChild(tdId);
+                    tr.appendChild(tdPw);
+                    tr.appendChild(tdNick);
+
+                    tbody.appendChild(tr);
+                });
+                
+                
+            })
         });
      </script>
 </body>

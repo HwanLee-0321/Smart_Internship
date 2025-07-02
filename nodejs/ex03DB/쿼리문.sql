@@ -8,9 +8,7 @@ create table member(
 -- 전체 멤버 보기 
 select * from member;
 
-INSERT INTO 수강생정보 VALUES ('SMHRD1' , '조준용' , 'A'); 
-INSERT INTO 수강생정보 VALUES ('SMHRD2' , '박수현' , 'A'); 
-INSERT INTO 수강생정보 VALUES ('SMHRD3' , '박병관' , 'B'); 
-INSERT INTO 수강생정보 VALUES ('SMHRD4' , '이명훈' , 'B'); 
-INSERT INTO 수강생정보 VALUES ('SMHRD5' , '나예호' , 'B'); 
-INSERT INTO 수강생정보 VALUES ('SMHRD6' , '선영표' , 'C'); 
+-- 예시 멤버 생성 
+INSERT INTO member VALUES ('SMHRD1' , '123' , '123'); 
+INSERT INTO member VALUES ('SMHRD2' , '1234' , '1234');
+INSERT INTO member VALUES ('SMHRD3' , '12345' , '12345');

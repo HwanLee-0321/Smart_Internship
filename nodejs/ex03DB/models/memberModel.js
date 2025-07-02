@@ -59,6 +59,7 @@ async function getAllMember(){
     try{
         const [result] = await conn.execute('select * from member');
         console.log(result);
+        return result;
     }finally{
         conn.release();
     }
