@@ -45,4 +45,14 @@ async function updateMember(id, newPw, newNick){
     }
 }
 
-module.exports = { createMember, loginMember , updateMember};
+async function removeMember(id){
+    const conn = await pool.getConnection();
+    try{
+        const result = await conn.execute('delete from member where id=?', [id]);
+        console.log(result);
+    } finally{
+        conn.release();
+    }
+}
+
+module.exports = { createMember, loginMember , updateMember, removeMember};
