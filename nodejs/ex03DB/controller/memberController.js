@@ -53,8 +53,6 @@ async function remove(req, res){
 
 async function list(req,res){
     const result = await getAllMember();
-    // result 형태 그대로(json Array) 그대로 응답
-    // 'hello'같은 거 res.send('hello'); 문자 그대로 응답
     res.json(result);
 }
 
