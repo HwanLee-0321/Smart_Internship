@@ -18,5 +18,27 @@
         <input type="hidden" name="id" value="1">
         <input type="submit" value="회원탈퇴">
     </form>
+
+    <!-- 회원들 테이블-->
+     <table id="member-list" border="1">
+        <thead>
+            <td>아이디</td>
+            <td>비밀번호</td>
+            <td>닉네임</td>
+        </thead>
+        <tbody>
+
+        </tbody>
+     </table>
+
+     <script>
+        // index.html을 정상적으로 응답받고 회원 정보를 불러오는 비동기 요청
+        // 화면은 갱신시키지 않고 데이터만 받아오기 때문
+        document.addEventListener('DOMContentLoaded', ()=>{
+            // 비동기 데이터 요청
+            // READ(->GET)
+            fetch('./user/list').then(res => {console.log(res);})
+        });
+     </script>
 </body>
 </html>

@@ -53,4 +53,15 @@ async function removeMember(id){
     }
 }
 
-module.exports = { createMember, loginMember , updateMember, removeMember};
+async function getAllMember(){
+    const conn = await pool.getConnection();
+
+    try{
+        const [result] = await conn.execute('select * from member');
+        console.log(result);
+    }finally{
+        conn.release();
+    }
+}
+
+module.exports = { createMember, loginMember , updateMember, removeMember, getAllMember};

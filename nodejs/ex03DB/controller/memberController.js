@@ -1,4 +1,4 @@
-const { createMember, loginMember, updateMember, removeMember} = require('../models/memberModel');
+const { createMember, loginMember, updateMember, removeMember, getAllMember} = require('../models/memberModel');
 
 async function join(req, res){
   console.log(req.body);
@@ -51,4 +51,11 @@ async function remove(req, res){
     }
 }
 
-module.exports = { join, login, update, remove};
+async function list(req,res){
+    const result = await getAllMember();
+    // result 형태 그대로(json Array) 그대로 응답
+    // 'hello'같은 거 res.send('hello'); 문자 그대로 응답
+    res.json(result);
+}
+
+module.exports = { join, login, update, remove, list};

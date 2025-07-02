@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { join, login, update, remove } = require('../controller/memberController');
+const { join, login, update, remove, list } = require('../controller/memberController');
 
 router.post('/join', join);
 
@@ -10,5 +10,7 @@ router.post('/login', login);
 router.post('/update', update);
 
 router.get('/delete', remove);
+
+router.get('/list', list);
 
 module.exports = router;
