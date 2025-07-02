@@ -41,6 +41,14 @@ async function remove(req, res){
     const {id} = req.query;
 
     await removeMember(id);
+
+    const result = await removeMember(id);
+
+    if (result > 0){
+        result.redirect('/join');
+    }else{
+        res.redirect('/');
+    }
 }
 
 module.exports = { join, login, update, remove};

@@ -20,14 +20,11 @@ async function createMember(id, pw, nick){
     }
 }
 
-//로그인
 async function loginMember(id, pw){
     const conn = await pool.getConnection();
 
     try{
-        //READ => Select
         const [result] = await conn.execute('select * from member where id=? and pw=?', [id,pw]);
-        
         return result;
     }finally{
         conn.release();
@@ -48,8 +45,9 @@ async function updateMember(id, newPw, newNick){
 async function removeMember(id){
     const conn = await pool.getConnection();
     try{
-        const result = await conn.execute('delete from member where id=?', [id]);
+        const [result] = await conn.execute('delete from member where id=?', [id]);
         console.log(result);
+        return result.affectedRows;
     } finally{
         conn.release();
     }
