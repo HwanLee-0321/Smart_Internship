@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <!-- 
+          일반적으로 사용하는 방식 - Web Session
+          (Session -> 사용자 관련 정보를 서버쪽에 저장(유지)하는 방식)
+     -->
+     <form action="./user/update" method="post">
+        <input type="hidden" name="id" value="smhrd" placeholder="아이디"><br>
+        <input type="password" name="pw" placeholder="비밀번호"><br>
+        <input type="text" name="nick" placeholder="닉네임"><br>
+        <input type="submit" value="수정"> 
+     </form>
+</body>
+</html>
