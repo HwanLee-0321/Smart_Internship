@@ -1,4 +1,4 @@
-const { createMember, loginMember } = require('../models/memberModel');
+const { createMember, loginMember, updateMember } = require('../models/memberModel');
 
 async function join(req, res){
   //요청데이터 가져오기 (body)
@@ -19,14 +19,26 @@ async function join(req, res){
 }
 
 async function login(req, res){
-  const { id, pw } = req.body;
-  const result = await loginMember(id,pw);
+	const { id, pw } = req.body;
+	const result = await loginMember(id,pw);
 
-  if(result.length > 0){
-    res.redirect('/');
-  }else{
-    res.redirect('/login');
-  }
+	if(result.length > 0){
+		res.redirect('/');
+	}else{
+		res.redirect('/login');
+	}
 }
 
-module.exports = { join, login };
+async function update(req,res){
+    const {id, pw, nick} = req.body;
+
+    const result = await updateMember(id, pw, nick);
+
+	if (result > 0){  // 수정성공
+		res.redirect('/');
+	}else{  // 수정실패
+		res.redirect('update');
+	}
+}
+
+module.exports = { join, login, update};
