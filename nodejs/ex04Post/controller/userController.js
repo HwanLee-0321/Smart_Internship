@@ -10,9 +10,11 @@ async function login(req,res){
             pw: result.pw
         }
 
-        res.send('로그인 성공!');
+        // res.send('로그인 성공!');
+        res.redirect('/');
     }else{
-        res.send('로그인 실패!');
+        // res.send('로그인 실패!');
+        res.redirect('/login');
     }
 }
 
