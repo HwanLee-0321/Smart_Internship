@@ -11,7 +11,7 @@
         <input type="submit" value="정보 수정 페이지">
     </form>
     <form action="/user/delete">
-        <input type="hidden" name="id" value="1">
+        <input type="hidden" name="id" id="delete-frm-id">
         <input type="submit" value="회원탈퇴">
     </form>
      <table id="member-list" border="1">
@@ -43,6 +43,13 @@
                     tbody.appendChild(tr);
                 });
             })
+            fetch('./user')
+               .then(res=>res.json())
+               .then(user=>{
+                    console.log(user)
+                    document.getElementById('delete-frm-id').value = user.id;
+               })
+               .catch(error => {console.error('실패: ', error)});
         });
      </script>
 </body>
