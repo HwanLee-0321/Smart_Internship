@@ -4,22 +4,16 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
-</head>
+</head> 
 <body>
     메인화면 <br>
-
     <form action="/update">
         <input type="submit" value="정보 수정 페이지">
     </form>
-
-    <!-- 누르자마자 회원탈퇴요청 -->
-     <!-- GET -->
     <form action="/user/delete">
         <input type="hidden" name="id" value="1">
         <input type="submit" value="회원탈퇴">
     </form>
-
-    <!-- 회원들 테이블-->
      <table id="member-list" border="1">
         <thead>
             <td>아이디</td>
@@ -34,40 +28,25 @@
             </tr>
         </tbody>
      </table>
-
      <script>
-        // index.html을 정상적으로 응답받고 회원 정보를 불러오는 비동기 요청
-        // 화면은 갱신시키지 않고 데이터만 받아오기 때문
         document.addEventListener('DOMContentLoaded', ()=>{
-            // 비동기 데이터 요청
-            // READ(->GET)
             fetch('./user/list')
             .then(res => res.json())
             .then(members => { 
-                // class -> .id->#
                 const tbody = document.querySelector('#member-list')
-
-                // foreach
                 members.forEach(member => {
                     const tr = document.createElement('tr');
-                    
                     const tdId = document.createElement('td');
                     tdId.textContent = member.id;
-
                     const tdPw = document.createElement('td');
                     tdPw.textContent = member.pw;
-
                     const tdNick = document.createElement('td');
                     tdNick.textContent = member.nick;
-
                     tr.appendChild(tdId);
                     tr.appendChild(tdPw);
                     tr.appendChild(tdNick);
-
                     tbody.appendChild(tr);
                 });
-                
-                
             })
         });
      </script>
