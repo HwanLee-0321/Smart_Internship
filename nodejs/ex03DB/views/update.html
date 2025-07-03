@@ -7,10 +7,24 @@
 </head>
 <body>
      <form action="./user/update" method="post">
-        <input type="hidden" name="id" value="smhrd" placeholder="아이디"><br>
+        <input type="hidden" name="id" placeholder="아이디" id="update-frm-id"><br>
         <input type="password" name="pw" placeholder="비밀번호"><br>
-        <input type="text" name="nick" placeholder="닉네임"><br>
+        <input type="text" name="nick" placeholder="닉네임" id="update-frm-nick"><br>
         <input type="submit" value="수정"> 
      </form>
+
+     <script>
+          // [GET] localhost:3000/user/
+          document.addEventListener('DOMContentLoaded', ()=>{
+               fetch('./user')
+               .then(res=>res.json())
+               .then(user=>{
+                    console.log(user)
+                    document.getElementById('update-frm-id').value = user.id;
+                    document.getElementById('update-frm-nick').value = user.nick;
+               })
+               .catch(error => {console.error('실패: ', error)});
+          });
+     </script>
 </body>
 </html>

@@ -14,9 +14,17 @@ async function join(req, res){
 
 async function login(req, res){
 	const { id, pw } = req.body;
-	const result = await loginMember(id,pw);
+	const [result] = await loginMember(id,pw);
 
-	if(result.length > 0){
+    //세션에 값 저장 (로그인 성공 시)
+    if(result){
+        req.session.loginMember = {
+        id : result.id,
+        nick : result.nick
+        }
+    }
+
+	if(result){
 		res.redirect('/');
 	}else{
 		res.redirect('/login');
@@ -56,4 +64,10 @@ async function list(req,res){
     res.json(result);
 }
 
-module.exports = { join, login, update, remove, list};
+function getSession(req,res){
+    // session 저장된 값 응답(아이디, 닉네임)
+    // 로그인할 떄 생성해준 세션 값
+    res.json(req.session.loginMember);
+}
+
+module.exports = { join, login, update, remove, list, getSession};
