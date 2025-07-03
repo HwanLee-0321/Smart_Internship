@@ -1,9 +1,7 @@
 const express = require('express');
+const {login} = require('../controller/userController');
 const router = express.Router();
-const path = require('path');
 
-router.get('/login', (res, req)=>{
-    res.sendFile(path.join(__dirname,'../views/login.html'));
-})
+router.post('/login', login);
 
 module.exports = router;
