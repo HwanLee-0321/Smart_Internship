@@ -2,13 +2,14 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const {createPost} = require('../controller/postController');
 
-const stroage = multer.diskStorage({ // 서버 디스크 저장
+const storage = multer.diskStorage({ // 서버 디스크 저장
     destination: (req, file, cb) => {
         cb(null, 'upload/');
     },
     filename: (req, file, cb) =>{
-        cb(null, Data.now()+path.extname(file.originalname));
+        cb(null, Date.now()+path.extname(file.originalname));
     }
 });
 const uplaod = multer({storage});

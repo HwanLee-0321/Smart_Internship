@@ -9,33 +9,33 @@ const sequelize = require('../db/sequelize');
 // 이미지파일이름(문자열) -> 이미지파일(서버공간)
 // 작성일자(시간데이터)
 const Post = sequelize.define('Post', {
-    id: {  // 게시물 아이디
+    id: {   // 게시물 아이디
         type: DataTypes.INTEGER,
-        autoIncreament: true,
+        autoIncrement: true, // 오타 수정: autoIncreament -> autoIncrement
         primaryKey: true
     },
-    title:{  // 게시물제목
+    title:{   // 게시물제목
         type:DataTypes.STRING,
-        allowNUull: false,
+        allowNull: false, // 오타 수정: allowNUull -> allowNull
     },
-    content:{  // 게시물내용
+    content:{   // 게시물내용
         type:DataTypes.TEXT,
-        allowNUull:false,
+        allowNull:false, // 오타 수정: allowNUull -> allowNull
     },
-    writer:{  // 작성자
+    writer:{   // 작성자
         type: DataTypes.STRING,
-        allowNUull: false
+        allowNull: false // 오타 수정: allowNull -> allowNull
     },
-    img:{  // 이미지파일이름.확장자
+    img:{   // 이미지파일이름.확장자
         type:DataTypes.STRING,
-        allowNUull:true
+        allowNull:true
     },
-    createdAt:{  // 작성일자
+    createdAt:{   // 작성일자
         type:DataTypes.DATE,
         defaultValue:DataTypes.NOW
     }
 }, {
-    talbeName: 'post',
+    tableName: 'post', // 오타 수정: tableName -> tableName
     timestamps: false
 });
 

@@ -1,11 +1,10 @@
-const Sequelize = require('../db/sequelize');
 const sequelize  = require('../db/sequelize');
 const Post = require('./post');
 
 async function create(newPost){
     try{
         // 연결확인
-        await Sequelize.authenticate();
+        await sequelize.authenticate();
 
         // 모델로 정의된 테이블 구조(post)를 실제 DB와 동기화
         // create -> force:true => create()실행될 때마다 테이블을 새로벡 생성(drop->create) => 매번 데이터가 다 삭제
@@ -13,9 +12,12 @@ async function create(newPost){
         sequelize.sync({alter:true});
 
         // 게시물 추가
-        Post.create(newPost);
+        const result = await Post.create(newPost);
+        console.log(result);
 
-    }finally{
-
+    } catch(err){
+        console.error('create 실패:', err);
     }
 }
+
+module.exports = {create};
