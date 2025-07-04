@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- [POST] localhost:3000/posts -->
-    <form action="./posts" method="post">
+    <form action="./posts" method="post" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="게시물 제목"><br>
         <input type="text" name="writer" placeholder="작성자" id="post-frm-writer" readonly><br>
         <textarea name="content" placeholder="게시물 내용"></textarea><br>
