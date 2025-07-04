@@ -13,4 +13,8 @@ router.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
 
+router.get('/write', (req,res)=>{
+    res.sendFile(path.join(__dirname, '../views/write.html'))
+});
+
 module.exports = router;

@@ -9,6 +9,7 @@ create table member(
 select * from member;
 
 -- 예시 멤버 생성 
+INSERT INTO member VALUES ('123' , '123' , '123');
 INSERT INTO member VALUES ('SMHRD1' , '123' , '123'); 
 INSERT INTO member VALUES ('SMHRD2' , '1234' , '1234');
 INSERT INTO member VALUES ('SMHRD3' , '12345' , '12345');
