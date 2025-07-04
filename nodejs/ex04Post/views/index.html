@@ -22,5 +22,45 @@
 
         </tbody>
     </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        //1. 회원 정보 전체 불러오기 요청
+        fetch('./posts')
+        .then(res => res.json())
+        .then(posts => {
+            console.log(posts);
+            const tbody = document.querySelector('#post-list tbody');
+
+            posts.forEach(post => {
+            const tr = document.createElement('tr');
+
+            const tdId = document.createElement('td');
+            //tdId.textContent = post.id;
+
+            const link = document.createElement('a');
+            link.href = `./one?id=${post.id}`;  // 예: 상세 페이지 링크
+            link.textContent = post.id;
+
+            tdId.appendChild(link);  
+
+            const tdTitle = document.createElement('td');
+            tdTitle.textContent = post.title;
+
+            const tdWriter = document.createElement('td');
+            tdWriter.textContent = post.writer;
+
+            tr.appendChild(tdId);
+            tr.appendChild(tdTitle);
+            tr.appendChild(tdWriter);
+
+            tbody.appendChild(tr);
+            });
+        })
+        .catch(error => {
+            console.error('게시물 정보 불러오기 실패:', error);
+        });
+    });
+    </script>
 </body>
 </html>

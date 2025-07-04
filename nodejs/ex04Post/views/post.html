@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="post-tb" border="1">
+        <tr>
+            <td>게시물 제목</td>
+            <td id="title"></td>
+        </tr>
+        <tr>
+            <td>작성자</td>
+            <td id="writer"></td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td id="content"></td>
+        </tr>
+        <tr>
+            <td>작성일자</td>
+            <td id="date"></td>
+        </tr>
+        <tr>
+            <td>이미지</td>
+            <td id="img"></td>
+        </tr>
+    </table>
+    <script>
+        //fetch API 사용
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+
+            fetch(`./posts/${id}`)
+            .then(res => res.json())
+            .then(post => {
+                document.getElementById('title').textContent = post.title;
+                document.getElementById('writer').textContent = post.writer;
+                document.getElementById('content').textContent = post.content;
+                document.getElementById('date').textContent = new Date(post.createdAt).toLocaleString();
+
+                const imgTd = document.getElementById('img');
+                const imgTag = document.createElement('img');
+                imgTag.src = `/upload/${post.img}`; //app 쪽에서 경로 설정해줘야 사용할 수 있음
+                imgTag.alt = '첨부 이미지';
+                imgTag.style.maxWidth = '200px';
+                imgTd.appendChild(imgTag);
+            })
+            .catch(error => {
+                console.error('회원 정보 불러오기 실패:', error);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -15,9 +15,36 @@ async function create(newPost){
         const result = await Post.create(newPost);
         console.log(result);
 
+        return result;
+
     } catch(err){
         console.error('create 실패:', err);
     }
 }
 
-module.exports = {create};
+async function getPostAll(){
+    try{
+        await sequelize.authenticate();
+        sequelize.sync({alter:true});
+        const result = await Post.findAll();
+        return result;
+    } catch(err){
+        console.err('게시물 전체 불러오기 실패', err);
+    }
+}
+
+async function getPostOne(id){
+    try{
+        await sequelize.authenticate();
+
+        await sequelize.sync({alter:true});
+
+        const result = await Post.findByPk(id);
+
+        return result;
+    } catch(err){
+        console.err('게시물 하나 불러오기 실패', err);
+    }
+}
+
+module.exports = {create, getPostAll, getPostOne};
