@@ -12,7 +12,7 @@ const App3 = () => {
     let mon = today.getMonth() + 1;
 
     // 2. 계절을 판단하는 로직 추가
-    let season = '';
+    let season = '제대로 입력하샘';
     if (mon >= 3 && mon <= 5) {
         season = '봄';
     } else if (mon >= 6 && mon <= 8) {
