@@ -1,7 +1,7 @@
 import React from 'react';
 import Menubox from './component/Menubox';
 import Member from './component/Member';
-import './App.css';
+import './App2.css';
 const App2 = () => {
   let temp = 'ice ';
   return (
