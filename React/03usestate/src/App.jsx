@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import pic from '/img.gif'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div> 
+      <img width="200px" src={pic} alt="" />
       <h2>{count}</h2>
       <button onClick={onIncrease}>+</button>
       <button onClick={onDecrease}>-</button>
