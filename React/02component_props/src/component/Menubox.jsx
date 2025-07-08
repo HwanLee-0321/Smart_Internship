@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 const Menubox = (props) => {
-  console.log(props.price)
-  console.log(props.name)
-
   return (
-    <div>
-      <div>
-            <h3>{props.name}</h3>
-            <p>{props.price}</p>
-        </div>
+    <div className="menu-card">
+      <h3>
+        {props.temp}
+        {props.name}
+      </h3>
+      <p>{Number(props.price).toLocaleString()}원</p>
     </div>
-  )
-}
+  );
+};
 
-export default Menubox
+export default Menubox;

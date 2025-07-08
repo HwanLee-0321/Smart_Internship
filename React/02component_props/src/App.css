@@ -40,3 +40,40 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Menu Styles */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.menu-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 220px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: #000;
+}
+
+.menu-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  font-weight: bold;
+}
