@@ -1,4 +1,6 @@
 import React from 'react';
+//  npm install react-bootstrap bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Ex05Map = ({ item }) => {
   return (
