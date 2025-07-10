@@ -1,31 +1,22 @@
 import React from 'react';
 //  npm install react-bootstrap bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';  // 부트스트랩 CSS를 적용하는 코드
+import {Card, Button} from 'react-bootstrap'
+
+import './Ex05Map.css';
 
 const Ex05Map = ({ item }) => {
   return (
-    <div style={{
-      border: '1px solid #ccc',
-      borderRadius: '8px',
-      padding: '16px',
-      margin: '16px',
-      maxWidth: '400px',
-      boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
-      fontFamily: 'Arial, sans-serif'
-    }}>
-      <img src={item.imgSrc} alt={item.title} style={{ width: '100%', borderRadius: '4px' }} />
-      <h2 style={{ marginTop: '16px' }}>{item.title} ({item.birthYear})</h2>
-      <p style={{ color: '#555' }}>{item.content}</p>
-      <a href={item.SNS} target="_blank" rel="noopener noreferrer" style={{
-        display: 'inline-block',
-        marginTop: '12px',
-        padding: '8px 16px',
-        backgroundColor: '#007BFF',
-        color: 'white',
-        textDecoration: 'none',
-        borderRadius: '4px'
-      }}>SNS Profile</a>
-    </div>
+    <Card style={{ width: '18rem', margin: '1rem' }} className="shadow-sm h-100 card-hover">
+      <Card.Img variant="top" src={item.imgSrc} style={{width: '286px', height: '350px', objectFit: 'cover'}} />
+      <Card.Body className="d-flex flex-column">
+        <Card.Title className="text-center">{item.title} ({item.birthYear}년생)</Card.Title>
+        <Card.Text className="text-center flex-grow-1">
+          {item.content}
+        </Card.Text>
+        <Button href={item.SNS} variant="outline-primary" target='_blank' className="mt-auto">SNS</Button>
+      </Card.Body>
+    </Card>
   );
 };
 
