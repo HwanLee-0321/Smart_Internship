@@ -1,0 +1,26 @@
+/* App10.css */
+.app10-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #e9ecef;
+}
+
+.app10-container h1 {
+    text-align: center;
+    color: #212529;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.app10-container hr {
+    border: none;
+    border-top: 1px dashed #ced4da;
+    margin: 2.5rem 0;
+}
