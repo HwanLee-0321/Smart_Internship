@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import Footer from '../src/components/EX11/Footer'
-import Content from '../src/components/EX11/Content'
-import Header from '../src/components/EX11/Header'
+import Footer from './components/Ex11/Footer'
+import Content from './components/Ex11/Content'
+import Header from './components/Ex11/Header'
 import { ThemeContext } from '../src/context/Ex11ThemeContext'
 import './style/ex11.css'
 
