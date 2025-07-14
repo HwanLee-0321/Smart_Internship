@@ -16,12 +16,10 @@ const App11 = () => {
       	<div className='page'>
 			{/* 하위 컴포넌트 3개 불러오기 */}
 			<ThemeContext.Provider value={{isDark, setIsDark}}>
-				<div>
-					{/* 하위 컴포넌트 불러오기 */}
-					<Header></Header>
-					<Content></Content>
-					<Footer></Footer>
-				</div>
+				{/* 하위 컴포넌트 불러오기 */}
+				<Header></Header>
+				<Content></Content>
+				<Footer></Footer>
 			</ThemeContext.Provider>
 		</div>
     )
