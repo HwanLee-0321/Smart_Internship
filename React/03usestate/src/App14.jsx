@@ -41,18 +41,18 @@ const App14 = () => {
     }, [])
     return (
         <div>
-            <h1>영화 순위</h1>
+            <h1>영화ㅋㅋ 순위ㅋㅋ</h1>
             <table border="1px">
-                <thead>
+                <thead style={{textAlign: 'center', fontWeight: 'bold'}}>
                     <tr>
-                        <th>순위</th>
-                        <th>영화 제목</th>
-                        <th>개봉일</th>
+                        <th>순위ㅋㅋ</th>
+                        <th>영화ㅋㅋ 제목ㅋㅋ</th>
+                        <th>개봉일ㅋㅋ</th>
                     </tr>
                 </thead>
                 <tbody>
                     {movieList.map(movie => (
-                        <tr key={movie.rnum}>
+                        <tr key={movie.rnum} style={{textAlign: 'center'}}>
                             <td>{movie.rank}</td>
                             <td>{movie.movieNm}</td>
                             <td>{movie.openDt}</td>
