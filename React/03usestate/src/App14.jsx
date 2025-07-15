@@ -28,7 +28,7 @@ const App14 = () => {
 
     // useEffect 생성
     useEffect(()=>{
-        let url = 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=77fc64ec7f8cbd4d13eef62e19f8da89&targetDt=20250713'
+        let url = 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=77fc64ec7f8cbd4d13eef62e19f8da89&targetDt=20250714'
         axios
             .get(url)
             .then((res)=>{
