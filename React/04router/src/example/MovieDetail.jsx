@@ -28,7 +28,11 @@ const MovieDetail = () => {
     }, [id])
 
     if (!movie){
-        return <div>Loading...</div>
+        return (
+            <div className="loading-container">
+                <div className="loading-spinner"></div>
+            </div>
+        )
     }
 
     return (
