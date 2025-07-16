@@ -1,0 +1,54 @@
+.movie-detail {
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  color: aliceblue;
+  background-color:  rgba(0, 0, 0, 0.9); /* Alpha 값이 0.8인 경우, 약간 투명한 검정색 */
+}
+
+.movie-detail button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.movie-detail button:hover {
+  background-color: #0056b3;
+}
+
+.movie-detail img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.movie-detail p {
+  font-size: 1.6em;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.loading-spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

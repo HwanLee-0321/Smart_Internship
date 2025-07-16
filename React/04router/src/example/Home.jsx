@@ -1,22 +1,34 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import '../style/Home.css'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../style/Home.css';
+
+const videos = ['/video.mp4', '/video2.mp4'];
 
 const Home = () => {
     const nav = useNavigate();
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+    const handleVideoEnd = () => {
+        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    };
 
     return (
         <div className='home'>
-            <video autoPlay loop muted className='home-video'>
-                <source src="/video.mp4" type="video/mp4" />
+            <video 
+                key={videos[currentVideoIndex]} 
+                autoPlay 
+                muted 
+                onEnded={handleVideoEnd} 
+                className='home-video'
+            >
+                <source src={videos[currentVideoIndex]} type="video/mp4" />
             </video>
             <div className='home-content'>
                 <h1>Welcome to the Pepe Movie site</h1>
-                {/* 버튼을 클릭했을 떄 -> 무비리스트 컴포넌트로 전환 */}
-                <button onClick={()=>{nav('/movies')}}>Search</button>
+                <button onClick={() => { nav('/movies') }}>Search</button>
             </div>
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;
