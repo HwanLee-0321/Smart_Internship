@@ -19,6 +19,7 @@ html, body {
     justify-content: center;
     text-align: center;
     overflow: hidden; /* 비디오가 컨테이너를 벗어나지 않도록 */
+    isolation: isolate;
 }
 
 .home-video {
