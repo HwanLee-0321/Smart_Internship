@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'SkyblessingInjeFontTTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2507-1@1.0/SkyblessingInjeFontTTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+    position: relative; /* 자식 요소의 absolute 포지셔닝 기준점 */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* 비디오가 컨테이너를 벗어나지 않도록 */
+}
+
+.home-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* 콘텐츠 뒤에 위치 */
+}
+  
+.home-content {
+    position: relative; /* 비디오 위에 콘텐츠가 오도록 */
+    z-index: 1; /* 비디오보다 높은 z-index */
+    background: rgba(216, 192, 192, 0.7); /* 투명한 배경 */
+    padding: 50px;
+    border-radius: 10px;
+}
+  
+.home h1 {
+    color: #333;
+    font-family: 'SkyblessingInjeFontTTF', sans-serif; /* 새로 적용한 폰트 */
+    font-size: 4.5em; /* 폰트 크기를 약간 키워 더욱 강조 */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* 더 강한 그림자 효과 */
+}
+  
+.home button {
+    background-color: #e50914; /* 넷플릭스 레드 색상 */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+  
+.home button:hover {
+    background-color: #f40612; /* 버튼 호버 색상 */
+}
