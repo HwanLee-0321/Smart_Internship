@@ -1,25 +1,30 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
-import MovieList from './example/MovieList'
-import MovieDetail from './example/MovieDetail'
-import Home from './example/Home'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+// Layout Component
+import Layout from './components/Layout';
+
+// Page Components
+import Home from './example/Home';
+import MovieList from './example/MovieList';
+import MovieDetail from './example/MovieDetail';
+import Search from './example/Search';
+import NotFound from './example/NotFound';
 
 const App3 = () => {
-    /*
-    [Routes, Route 세팅]
-    - 경로가 '/' -> Home 컴포넌트를 보여주겠다.
-    - 경로가 '/movies' -> MovieList 컴포넌트
-    - 경로가 '/movie' -> MovieDetail 컴포넌트
-    */
     return (
-        <div>
-            <Routes>
-                <Route path='/' element={<Home />}></Route>
-                <Route path='/movie/:id' element={<MovieDetail />}></Route>
-                <Route path='/movies' element={<MovieList />}></Route>
-            </Routes>
-        </div>
-    )
-}
+        <Routes>
+            {/* Routes with Header and Footer */}
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="movies" element={<MovieList />} />
+                <Route path="movie/:id" element={<MovieDetail />} />
+                <Route path="search" element={<Search />} />
+                {/* Catch-all route for 404 Not Found page */}
+                <Route path="*" element={<NotFound />} />
+            </Route>
+        </Routes>
+    );
+};
 
-export default App3
+export default App3;

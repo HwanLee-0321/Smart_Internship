@@ -1,0 +1,12 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #181818; /* A slightly lighter black for the main content area */
+    color: white;
+}
+
+.main-content {
+    flex: 1; /* Ensures the main content takes up available space */
+    padding: 20px;
+}

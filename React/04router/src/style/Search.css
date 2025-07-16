@@ -1,0 +1,17 @@
+.search-results-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.search-results-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.search-results-container .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
