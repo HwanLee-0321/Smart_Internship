@@ -3,7 +3,7 @@ import { ThemeContext } from "../../context/Ex11ThemeContext"
 
 const Footer = () => {
     // 컨텍스트 사용 => value 속성 안에 있는 2개의 값 가져오기
-    const {isDark, setIsDark} = useContext(ThemeContext);
+    const [isDark, setIsDark] = useContext(ThemeContext);
 
     // 함수명: toggleTheme
     // 사용목적은 state안에 있는 값을 계속 반대로 바꾸기 위해서
