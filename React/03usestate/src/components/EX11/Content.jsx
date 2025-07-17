@@ -1,12 +1,15 @@
 import React, {useContext} from 'react'
+// ThemeContext를 임포트합니다.
 import {ThemeContext} from '../../context/Ex11ThemeContext'
 
 const Content = () => {
-	const {isDark, setIsDark} = useContext(ThemeContext);
+    // useContext 훅을 사용하여 ThemeContext의 isDark 값을 가져옵니다.
+	const {isDark} = useContext(ThemeContext);
 	return (
 		<div
 		className='content'
 		style={{
+			// isDark 값에 따라 배경색과 글자색을 동적으로 변경합니다.
 			backgroundColor: isDark ? 'black' : 'white',
 			color: isDark ? 'white' : 'black'
 		}}

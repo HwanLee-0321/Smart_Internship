@@ -1,5 +1,6 @@
-import React, { useContext } from 'react'
-import { TodoContext } from '../../context/Ex12TodoContext'
+import React, { useContext } from 'react';
+import { TodoContext } from '../../context/Ex12TodoContext';
+import DOMPurify from 'dompurify';
 
 // 부모 컴포넌트(List)로부터 item 객체를 props로 받습니다.
 const ListItem = ({ item }) => {
@@ -27,10 +28,16 @@ const ListItem = ({ item }) => {
       </td>
       <td>
         <label>
-          {/* 할 일의 완료 여부에 따라 텍스트에 취소선을 적용합니다. */}
-          <span className='todo-text' style={{ textDecoration: item.completed ? 'line-through' : 'none' }}>
-            {item.text}
-          </span>
+          {/* 
+            할 일의 완료 여부에 따라 텍스트에 취소선을 적용합니다.
+            DOMPurify.sanitize를 사용하여 XSS 공격을 방지하고,
+            dangerouslySetInnerHTML을 통해 안전하게 HTML을 렌더링합니다.
+          */}
+          <span 
+            className='todo-text' 
+            style={{ textDecoration: item.completed ? 'line-through' : 'none' }}
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.text) }}
+          />
         </label>
       </td>
       <td>
@@ -41,4 +48,4 @@ const ListItem = ({ item }) => {
   )
 }
 
-export default ListItem
+export default ListItem;
