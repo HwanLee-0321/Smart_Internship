@@ -1,21 +1,24 @@
 import React, {useState} from 'react'
-// 하위컴포넌트 및 컨텍스트 임포트
+// 하위 컴포넌트 및 Context를 임포트합니다.
 import ColorList from './components/Ex10/ColorList'
 import ColorResult from './components/Ex10/ColorResult'
 import { ColorContext } from './context/Ex10ColorContext'
 
 const App10 = () => {
-    // Context란? 리액트 컴포넌트 간에 값을 전역적으로 공유할 수 있게 하는 기능
-    // props로만 데이터를 전달했을 때 => 디렉토리의 구조가 깊어지면 오류 및 불편함.
+    // Context란? React 컴포넌트 트리 안에서 전역적으로 데이터를 공유할 수 있게 해주는 기능입니다.
+    // props를 통해 데이터를 전달하는 방식(prop drilling)의 단점을 해결할 수 있습니다.
 
-    // conText 만드는 순서
-    // XXContext.js => createContext import해오기 => export 변수명 = createContext(null)
-    // return안에 있는 요소를 컨텍스트로 감싸주기
-    // 컨텍스트 안에 프로바이더 속성 적용하기
+    // Context 사용 순서:
+    // 1. context/XXContext.js 파일에서 createContext를 사용하여 Context 객체를 생성하고 export 합니다.
+    // 2. 데이터를 공유할 최상위 컴포넌트에서 <Context.Provider>로 하위 컴포넌트들을 감싸줍니다.
+    // 3. Provider의 value prop에 공유할 데이터를 전달합니다.
+    // 4. 데이터를 사용할 하위 컴포넌트에서 useContext 훅을 사용하여 데이터를 가져옵니다.
 
+    // 'choiceColor' state를 선언하고, 초기값을 'red'로 설정합니다.
     const [choiceColor, setChoiceColor] = useState('red')
         
     return (
+        // ColorContext.Provider를 통해 choiceColor와 setChoiceColor를 하위 컴포넌트에 제공합니다.
         <ColorContext.Provider value={{choiceColor, setChoiceColor}}>
             <div style={{margin: '2%'}}>
                 <h1>색상 변경하기</h1>
