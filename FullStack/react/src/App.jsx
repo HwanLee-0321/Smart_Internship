@@ -14,7 +14,13 @@ function App() {
     // '/Join' 메인주소로 가게되면 Join보여주기
 
     <>
-      
+      <div>
+        <Routes>
+          <Route path='/'     element={<Join/>}></Route>
+          <Route path='/home' element={<Home/>}></Route>
+          <Route path='/login'element={<Login/>}></Route>
+        </Routes>
+      </div>
     </>
   )
 }
